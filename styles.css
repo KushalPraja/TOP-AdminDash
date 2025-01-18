@@ -1,22 +1,55 @@
 /* The side navigation menu */
-.sidebar {
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #f1f1f1;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    
   }
+
+/* Define the grid container */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr; /* Adjust the columns as needed */
+  grid-template-rows: auto;
+}
+
+.sidebar {
+    grid-column: 1 / 2; /* Place the sidebar in the first column */
+    grid-row: 1 / 2; /* Place the sidebar in the first row */
+    background-color: #f1f1f1;
+    height: 100vh;
+    text-align: center;
+    padding: 5%;
+}
   
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
   /* Sidebar links */
   .sidebar li {
-    display: block;
+    display: flex;
     color: black;
-    padding: 16px;
-    text-decoration: none;
+    
+    font-family: 'Montserrat', Courier, monospace;
+  }
+
+  .sidebar li p{
+    display: flex;
+    justify-self: center;
+    align-self: center;
   }
   
+  .sidebar li img {
+    width: 20px;
+    height: auto;
+    margin-right: 20px;
+    margin-left: 20px;
+
+  }
   /* Active/current link */
   .sidebar li.active {
     background-color: #04AA6D;
@@ -25,8 +58,8 @@
   
   /* Links on mouse-over */
   .sidebar li:hover:not(.active) {
-    background-color: #555;
-    color: white;
+    background-color: #878787;
+
   }
   
 
@@ -48,3 +81,69 @@
       float: none;
     }
   }
+
+
+/** main content */
+
+.topbar{
+
+    text-align: center;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+
+    justify-content: space-between;
+
+}
+.main{
+    display: grid;
+    grid-template-rows: 1fr 2fr 4fr;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+  
+}
+
+.searchTerm {
+  width: 100%;
+  border: 1px solid #000000;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #000000;
+}
+
+.searchButton {
+    width: 40px;
+  border: 1px solid #000000;
+  background: #dfefef;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+    width: 70%;
+}
+
+/* Style the user photo */
+.user{
+    width:25%;
+    gap: 10px;
+    display: flex;
+}
+
+

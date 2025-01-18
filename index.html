@@ -3,28 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin DashBoard</title>
+    <title>Admin Dashboard</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <div class="sidebar"> 
-        <h1>Dashboard</h1>
-        
-        <ul>
-            <li>Home </li>
-            <li>Profile</li>
-            <li>Messages</li>
-            <li>History</li>
-            <li>Tasks</li>
-            <li>Communties</li>
-
-            <li>Settings</li>
-            <li>Support</li>
-            <li>Privacy</li>
+    <div class="container">
+        <div class="sidebar"> 
+            <h2 style="font-family: Helvetica">Admin Dashboard</h2>
             
-            
-        </ul>
+            <ul>
+
+                <li>
+                    <img src="icons/home-account.svg" alt="home">
+                    <p>Home</p> 
+                </li>
+
+                <li>
+                    <img src="icons/card-account-details-outline.svg" alt="profile">
+                    <p>Profile</p>
+                </li>
+
+                <li>
+                    <img src="icons/message-badge-outline.svg" alt="users">
+                    <p>Messages</p>
+                </li>
+                <li>
+                    <img src="icons/history.svg" alt="history">
+                    <p>History</p>
+                </li>
+                <li>
+                    <img src="icons/sticker-outline.svg" alt="settings">
+                    <p>Tasks</p>
+                </li>
+                <li>
+                    <img src="icons/account-group-outline.svg">
+                    <p>Communities</p>
+                </li>
+                <li>
+                    <img src="icons/cog.svg" alt="settings">
+                    <p>Settings</p>
+                </li>
+                <li>
+                    <img src="icons/help-box-outline.svg" alt="support">
+                    <p>Support</p>
+                </li>
+                <li>
+                    <img src="icons/shield-lock.svg" alt="privacy">
+                    <p>Privacy</p>
+                </li>  
+            </ul>
+        </div>
+
+        <div class="main">
+
+            <div class="topbar">
+                <div class="wrap">
+                    <div class="search">
+                       <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                       <button type="submit" class="searchButton">
+                         <i class="fa fa-search"></i>
+                      </button>
+                    </div>   
+                </div>
+
+                
+                <div class="user">
+                    <img src="icons/account-group-outline.svg" alt="user">
+                    <p>Admin</p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
